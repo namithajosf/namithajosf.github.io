@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Namitha Joseph</title>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Delius&family=Cantora+One&family=Ribeye+Marrow&family=Staatliches&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<div class="navbar">
+			<div
+				class="toggle-arrow"
+				id="toggle-arrow"
+			>
+				<img
+					src="/images/collapse-arrow.png"
+					alt="Toggle Arrow"
+				/>
+			</div>
+			<a href="#home">Home</a>
+			<a href="#about">About</a>
+			<a href="#technologies">Technologies</a>
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact</a>
+		</div>
+
+		<section
+			class="intro"
+			id="home"
+		>
+			<img
+				src="/images/img.png"
+				alt="Namitha Joseph"
+				class="profile-pic"
+			/>
+			<h1 class="self-intro">Hi, I'm Namitha Joseph</h1>
+			<p class="about">Backend Developer & AI/ML Enthusiast</p>
+			<div class="social-icons">
+				<a
+					href="https://www.linkedin.com/in/namithajosf/"
+					target="_blank"
+					><img
+						src="/images/linkedin-icon.png"
+						alt="LinkedIn"
+				/></a>
+				<a
+					href="https://github.com/namithajosf/"
+					target="_blank"
+					><img
+						src="/images/github-icon.png"
+						alt="GitHub"
+				/></a>
+				<a
+					href="https://in.pinterest.com/namithajosf/"
+					target="_blank"
+					><img
+						src="/images/pinterest-icon.png"
+						alt="Pinterest"
+				/></a>
+				<a
+					href="https://x.com/namithajosf"
+					target="_blank"
+					><img
+						src="/images/x-icon.png"
+						alt="X"
+				/></a>
+			</div>
+		</section>
+
+		<section
+			class="about"
+			id="about"
+		>
+			<h2>About Me</h2>
+			<p>
+				I am an aspiring software developer currently pursuing my Master
+				of Computer Applications (MCA) at Cochin University of Science
+				and Technology. With a solid foundation in web development,
+				database management, and a keen interest in artificial
+				intelligence and machine learning, I have developed projects
+				such as a mood tracking website using HTML, CSS, JavaScript, and
+				PHP, and an inventory management Android app built with Flutter
+				and Django. Currently, I am working on <strong>OpenUI</strong>,
+				a project aimed at converting UI images to React code using deep
+				learning and computer vision techniques, and contributing to
+				<strong>PaperSmith</strong>, a Retrieval-Augmented Generation
+				(RAG) system that automates literature reviews and hypothesis
+				generation using open-access resources. I am eager to drive
+				innovative solutions through technology and continuously enhance
+				my skills in software development and AI/ML.
+			</p>
+		</section>
+
+		<!-- Technologies Section -->
+		<section
+			class="technologies"
+			id="technologies"
+		>
+			<h2>Technologies</h2>
+			<div class="tech-card">
+				<h3>Web Development</h3>
+				<ul>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					<li>Flutter</li>
+					<li>ReactJS</li>
+					<li>PHP</li>
+					<li>Django</li>
+					<li>Flask</li>
+					<li>NodeJS</li>
+				</ul>
+			</div>
+			<div class="tech-card">
+				<h3>Programming Languages</h3>
+				<ul>
+					<li>Python</li>
+					<li>Java</li>
+					<li>C</li>
+					<li>C++</li>
+				</ul>
+			</div>
+			<div class="tech-card">
+				<h3>Databases</h3>
+				<ul>
+					<li>MySQL</li>
+					<li>SQLite</li>
+					<li>MongoDB</li>
+					<li>Firebase</li>
+				</ul>
+			</div>
+			<div class="tech-card">
+				<h3>Other Tools & Technologies</h3>
+				<ul>
+					<li>Git</li>
+					<li>GitHub</li>
+					<li>Linux</li>
+					<li>API</li>
+				</ul>
+			</div>
+		</section>
+
+		<section
+			id="projects"
+			class="projects-section"
+		>
+			<h2>Projects</h2>
+
+			<!-- Completed Projects -->
+			<div class="project">
+				<button
+					class="project-title"
+					onclick="toggleDescription('mood-tracking')"
+				>
+					Mood Tracking Website
+					<img
+						src="/images/collapse-arrow.png"
+						alt="Toggle Arrow"
+						class="project-arrow"
+						id="arrow-mood-tracking"
+					/>
+				</button>
+				<div
+					id="mood-tracking"
+					class="project-description"
+				>
+					<p>
+						Developed a mood tracking website using HTML and CSS for
+						the front-end and JavaScript, PHP for the back-end,
+						enabling users to record and analyze mood patterns over
+						time.
+					</p>
+				</div>
+			</div>
+
+			<div class="project">
+				<button
+					class="project-title"
+					onclick="toggleDescription('inventory-app')"
+				>
+					Inventory Management Android App
+					<img
+						src="/images/collapse-arrow.png"
+						alt="Toggle Arrow"
+						class="project-arrow"
+						id="arrow-inventory-app"
+					/>
+				</button>
+				<div
+					id="inventory-app"
+					class="project-description"
+				>
+					<p>
+						Built an inventory management Android app using Flutter
+						for the front-end and Django for the back-end, allowing
+						stores to manage inventory and track daily sales.
+						Integrated with a MySQL database to ensure data
+						consistency and reliability.
+					</p>
+				</div>
+			</div>
+
+			<!-- Ongoing Projects -->
+			<div class="project">
+				<button
+					class="project-title"
+					onclick="toggleDescription('openui')"
+				>
+					OpenUI
+					<img
+						src="/images/collapse-arrow.png"
+						alt="Toggle Arrow"
+						class="project-arrow"
+						id="arrow-openui"
+					/>
+				</button>
+				<div
+					id="openui"
+					class="project-description"
+				>
+					<p>
+						Currently developing a project aimed at converting UI
+						images to React code, exploring different approaches
+						using deep learning and computer vision techniques.
+					</p>
+				</div>
+			</div>
+
+			<div class="project">
+				<button
+					class="project-title"
+					onclick="toggleDescription('papersmith')"
+				>
+					PaperSmith
+					<img
+						src="/images/collapse-arrow.png"
+						alt="Toggle Arrow"
+						class="project-arrow"
+						id="arrow-papersmith"
+					/>
+				</button>
+				<div
+					id="papersmith"
+					class="project-description"
+				>
+					<p>
+						Contributing to a Retrieval-Augmented Generation (RAG)
+						system that automates literature review and hypothesis
+						generation using open-access resources. The system
+						leverages sources like PubMed Central, DOAJ, and
+						OpenAIRE to support interdisciplinary research.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section
+			id="projects"
+			class="projects-section"
+		></section>
+		<section
+			id="contact"
+			class="contact-section"
+		>
+			<h2>Contact Me</h2>
+			<form
+				class="contact-form"
+				id="contact-form"
+			>
+				<label for="name">Name</label>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					required
+				/>
+
+				<label for="email">Email</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required
+				/>
+
+				<label for="subject">Subject</label>
+				<input
+					type="text"
+					id="subject"
+					name="subject"
+					required
+				/>
+
+				<label for="message">Message</label>
+				<textarea
+					id="message"
+					name="message"
+					required
+				></textarea>
+
+				<button type="submit">Send Message</button>
+			</form>
+			<p id="form-status"></p>
+		</section>
+
+		<script src="script.js"></script>
+		<!-- Link to JavaScript -->
+	</body>
+</html>

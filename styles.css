@@ -1,0 +1,380 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	color: #5b1549;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0;
+	background-color: #f9f5f9;
+}
+
+.navbar {
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	position: fixed;
+	top: 1vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90vw;
+	max-width: 90vw;
+	height: 8vh;
+	background-color: #b06d94;
+	border-radius: 2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2vw;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	transition: max-height 0.3s ease;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	padding: 0.5vh 1vw;
+	transition: background-color 0.3s ease;
+	border-radius: 0.5vw;
+}
+
+.navbar a:hover {
+	background-color: #d68db4;
+}
+
+.toggle-arrow {
+	display: none;
+	cursor: pointer;
+	color: white;
+	font-size: 1.5rem;
+	margin-right: 1vw;
+}
+
+.toggle-arrow.open {
+	transform: rotate(180deg);
+}
+
+.navbar.collapsed {
+	height: 10vh;
+	overflow: hidden;
+}
+
+.navbar.collapsed a {
+	display: none;
+}
+
+.navbar.collapsed .toggle-arrow {
+	display: block;
+}
+
+@media (max-width: 770px) {
+	.navbar {
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+
+	.navbar.collapsed {
+		height: 10vh;
+	}
+
+	.navbar.collapsed a {
+		display: none;
+	}
+
+	.toggle-arrow {
+		display: block;
+	}
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 5vh 5vw;
+	width: 90vw;
+	max-width: 80vw;
+}
+
+.profile-pic {
+	width: 30%; /* Reduced width */
+	max-width: 20vw; /* Adjusted max-width for smaller screens */
+	height: auto;
+	border-radius: 50%;
+	border: 0.2vw solid #b884a7;
+	margin-top: 4vh;
+}
+
+.intro h1 {
+	font-family: "Delius", sans-serif;
+	color: #b84a7a;
+	font-size: 2.5rem;
+	margin: 0;
+}
+
+.intro p {
+	font-family: "Cantora One", sans-serif;
+	font-size: 1.2rem;
+	margin-top: 1vh;
+	border: none;
+	padding: 0;
+	box-shadow: none;
+}
+
+.social-icons {
+	margin-top: 2vh;
+}
+
+.social-icons a {
+	margin: 0 1vw;
+	display: inline-block;
+}
+
+.social-icons img {
+	width: 3vw;
+	height: 3vw;
+}
+
+@media (max-width: 768px) {
+	.intro {
+		margin: 20vh 2vw;
+	}
+
+	.profile-pic {
+		width: 80%;
+	}
+
+	.intro h1 {
+		font-size: 2rem;
+	}
+
+	.intro p {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.intro h1 {
+		font-size: 1.5rem;
+	}
+
+	.intro p {
+		font-size: 0.9rem;
+	}
+}
+
+.about {
+	background-color: #f7f3f6;
+	color: #5b1549;
+	padding: 2vh;
+	border-radius: 1vw;
+	margin: 2vh 5vw;
+	width: 90vw;
+	max-width: 80vw;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about h2 {
+	font-family: "Ribeye Marrow", cursive;
+	color: #b84a7a;
+	font-size: 2rem;
+	margin-bottom: 1vh;
+}
+
+.about p {
+	font-family: "Cantora One", sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.6;
+}
+
+.technologies {
+	background-color: #f7f3f6;
+	color: #5b1549;
+	padding: 2vh;
+	border-radius: 1vw;
+	margin: 2vh 5vw;
+	max-width: 1000px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.technologies h2 {
+	font-family: "Ribeye Marrow", cursive;
+	color: #b84a7a;
+	font-size: 2rem;
+	margin-bottom: 1vh;
+	text-align: center;
+	width: 100%;
+}
+
+.tech-card {
+	background-color: #f0d6e9;
+	border-radius: 0.8vw;
+	padding: 2vh;
+	margin: 1vh;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	flex: 1 1 20vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+}
+
+.tech-card h3 {
+	font-size: 130%;
+	font-family: "Staatliches", cursive;
+	color: #8f507c;
+	margin-bottom: 1vh;
+	text-align: center;
+}
+
+.tech-card ul {
+	list-style-type: none;
+	padding: 0;
+	text-align: center;
+}
+
+.tech-card li {
+	font-family: "Cantora One", sans-serif;
+	font-size: 110%;
+	line-height: 1.6;
+	margin-bottom: 0.5vh;
+	color: black;
+}
+.projects-section {
+	width: 90%;
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 10px;
+}
+.projects-section h2 {
+	font-family: "Ribeye Marrow", cursive;
+}
+
+.project-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #b06d94;
+	color: white;
+	font-size: 1.2rem;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+	text-align: left;
+	margin-top: 10px;
+	font-family: Arial, sans-serif;
+	transition: background-color 0.3s ease;
+}
+
+.project-title:hover {
+	background-color: #d68db4;
+}
+
+.project-arrow {
+	width: 15px;
+	height: 15px;
+	transition: transform 0.3s ease;
+	transform: rotate(180deg); /* Initial inverted arrow */
+}
+
+.project-title[aria-expanded="true"] .project-arrow {
+	transform: rotate(0deg); /* Rotate to normal on expand */
+}
+
+.project-description {
+	display: none;
+	padding: 10px;
+	background-color: #f9f5f9;
+	border-radius: 5px;
+	margin-top: 5px;
+	font-size: 1rem;
+	color: #5b1549;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-section {
+	width: 90%;
+	max-width: 600px;
+	margin: 2vh auto;
+	padding: 2vh;
+	background-color: #f7f3f6;
+	color: #5b1549;
+	border-radius: 1vw;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.contact-section h2 {
+	font-family: "Ribeye Marrow", cursive;
+	color: #b84a7a;
+	font-size: 2rem;
+	margin-bottom: 1vh;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-form label {
+	font-family: "Cantora One", sans-serif;
+	margin-top: 1vh;
+	text-align: left;
+	color: #5b1549;
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 1vh;
+	margin: 0.5vh 0;
+	border: 1px solid #b06d94;
+	border-radius: 5px;
+	font-family: "Cantora One", sans-serif;
+	font-size: 1rem;
+}
+
+.contact-form textarea {
+	resize: vertical;
+	height: 100px;
+}
+
+.contact-form button {
+	margin-top: 2vh;
+	padding: 1vh;
+	background-color: #b06d94;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Arial", sans-serif;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+	background-color: #d68db4;
+}
+
+@media (max-width: 480px) {
+	.contact-section {
+		width: 95%;
+	}
+
+	.contact-section h2 {
+		font-size: 1.5rem;
+	}
+}
