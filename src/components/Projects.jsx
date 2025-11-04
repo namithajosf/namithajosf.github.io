@@ -42,9 +42,9 @@ export default function Projects() {
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-(--color-blue)/20"
             >
               <div className="flex justify-between items-start mb-4">
-                <h2 className="text-3xl font-bold text-(--color-green)">
+                <h3 className="text-3xl font-dm-serif text-zinc-900">
                   {work.title}
-                </h2>
+                </h3>
                 <span className="text-4xl font-light text-(--color-green)/40">
                   {work.id}
                 </span>
