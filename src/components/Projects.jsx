@@ -33,9 +33,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-[#f6fdf5] p-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-bold text-(--color-green) mb-12">
-          Projects
-        </h1>
+        <h2>Projects</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {works.map((work) => (

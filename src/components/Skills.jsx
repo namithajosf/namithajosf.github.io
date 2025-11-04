@@ -72,9 +72,7 @@ export default function Skills() {
     <div className="min-h-screen bg-(--color-light) p-8">
       <div className="max-w-6xl mx-auto">
         <section className="mb-16">
-          <h1 className="text-4xl font-bold text-(--color-green) mb-8">
-            Skills
-          </h1>
+          <h2>Skills</h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-8">
             {skills.map((skill, index) => (
               <div

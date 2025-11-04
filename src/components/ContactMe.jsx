@@ -36,9 +36,7 @@ export default function ContactMe() {
   return (
     <div className="min-h-screen bg-(--color-light flex items-center justify-center p-4">
       <div className="w-full max-w-4xl">
-        <h1 className="text-5xl font-bold text-center mb-12 text-(--color-green)">
-          Get in Touch
-        </h1>
+        <h2 className="text-center">Get in Touch</h2>
 
         <div className="relative">
           {/* Main form container */}
