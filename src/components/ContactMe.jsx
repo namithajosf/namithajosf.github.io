@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import {
   FiMail,
   FiGithub,
@@ -17,36 +18,45 @@ export default function ContactMe() {
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    if (formData.name && formData.email && formData.message) {
-      setStatus("Message sent successfully!");
-      setTimeout(() => {
-        setStatus("");
-        setFormData({ name: "", email: "", message: "" });
-      }, 3000);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus("Please fill all fields!");
+      return;
     }
+
+    emailjs
+      .send(
+        "service_br8b0ck",
+        "template_qgh14ee",
+        formData,
+        "BPrd_t3SZXhWVNRZt"
+      )
+      .then(() => {
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus(""), 3000);
+      })
+      .catch(() => {
+        setStatus("Failed to send message. Please try again later.");
+      });
   };
 
   return (
-    <div className="min-h-screen bg-(--color-light flex items-center justify-center p-4">
+    <div className="min-h-screen bg-(--color-light) flex items-center justify-center p-4">
       <div className="w-full max-w-4xl">
         <h2 className="text-center">Get in Touch</h2>
 
         <div className="relative">
-          {/* Main form container */}
           <div className="relative bg-white rounded-lg shadow-2xl p-8 md:p-12">
-            <div className="space-y-6">
-              {/* Name and Email Row */}
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Name Input */}
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-(--color-green)">
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 text-(--color-green)">
                     <FiUser size={20} />
                   </div>
                   <input
@@ -59,9 +69,8 @@ export default function ContactMe() {
                   />
                 </div>
 
-                {/* Email Input */}
                 <div className="relative">
-                  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-(--color-green)">
+                  <div className="absolute left-4 top-1/2 -translate-y-1/2 text-(--color-green)">
                     <FiMail size={20} />
                   </div>
                   <input
@@ -75,7 +84,6 @@ export default function ContactMe() {
                 </div>
               </div>
 
-              {/* Message Textarea */}
               <div className="relative">
                 <div className="absolute left-4 top-4 text-(--color-green)">
                   <FiMessageSquare size={20} />
@@ -90,17 +98,22 @@ export default function ContactMe() {
                 ></textarea>
               </div>
 
-              {/* Submit Button */}
               <div className="flex justify-center">
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   className="bg-linear-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2"
                 >
                   <FiSend size={18} />
                   Send Message
                 </button>
               </div>
-            </div>
+            </form>
+
+            {status && (
+              <div className="text-center text-(--color-green) font-medium mt-4">
+                {status}
+              </div>
+            )}
           </div>
         </div>
 
