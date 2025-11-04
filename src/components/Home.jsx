@@ -51,9 +51,14 @@ const Home = () => {
             Engineering real-world impact in the fast lane.
           </p>
 
-          <button className="mt-2 px-6 py-2 rounded-md bg-(--color-green) text-(--color-light) font-medium hover:bg-(--color-dark) transition">
-            Download Resume
-          </button>
+          <a
+            href="/Namitha_Joseph_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 px-6 py-2 rounded-md bg-(--color-green) text-(--color-light) font-medium hover:bg-(--color-dark) transition"
+          >
+            View Resume
+          </a>
         </div>
 
         {/* Right section - Image and Icons */}
