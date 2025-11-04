@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../index.css";
 import profileImg from "../assets/profile.jpeg";
-import { FaLinkedin, FaGithub, FaEnvelope, FaDiscord } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaDiscord,
+  FaInstagram,
+  FaInstagramSquare,
+} from "react-icons/fa";
 
 const Home = () => {
   const [shadow, setShadow] = useState(false);
@@ -36,10 +43,9 @@ const Home = () => {
           </div>
 
           {/* Text content aligned under the bar */}
-          <h1 className="text-5xl md:text-6xl font-bold text-(--color-dark) leading-tight">
+          <h1 className="text-5xl md:text-6xl font-medium text-(--color-dark) leading-tight font-roboto-serif">
             Hi, I'm <br className="hidden md:block" /> Namitha Joseph
           </h1>
-
           <p className="text-(--color-dark) opacity-80 max-w-lg">
             Developer. AI explorer. Problem-solver. <br />
             Engineering real-world impact in the fast lane.
@@ -58,17 +64,33 @@ const Home = () => {
             className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-2xl shadow-md"
           />
           <div className="flex justify-center space-x-5 mt-6 text-(--color-orange) text-2xl">
-            <a href="#" aria-label="LinkedIn">
-              <FaLinkedin className="hover:scale-110 transition" />
+            <a
+              href="https://www.linkedin.com/in/namithajosf/"
+              aria-label="LinkedIn"
+              target="_blank"
+            >
+              <FaLinkedin className="hover:scale-130 transition" />
             </a>
-            <a href="#" aria-label="GitHub">
-              <FaGithub className="hover:scale-110 transition" />
+            <a
+              href="https://github.com/namithajosf"
+              aria-label="GitHub"
+              target="_blank"
+            >
+              <FaGithub className="hover:scale-130 transition" />
             </a>
-            <a href="#" aria-label="Email">
-              <FaEnvelope className="hover:scale-110 transition" />
+            <a
+              href="mailto: namithajosf@gmail.com"
+              aria-label="Email"
+              target="_blank"
+            >
+              <FaEnvelope className="hover:scale-130 transition" />
             </a>
-            <a href="#" aria-label="Discord">
-              <FaDiscord className="hover:scale-110 transition" />
+            <a
+              href="https://www.instagram.com/namithajosf/"
+              aria-label="Instagram"
+              target="_blank"
+            >
+              <FaInstagramSquare className="hover:scale-130 transition" />
             </a>
           </div>
         </div>
