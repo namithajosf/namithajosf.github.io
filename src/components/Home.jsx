@@ -63,36 +63,6 @@ const Home = () => {
             alt="Namitha Joseph"
             className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-2xl shadow-md"
           />
-          <div className="flex justify-center space-x-5 mt-6 text-(--color-orange) text-2xl">
-            <a
-              href="https://www.linkedin.com/in/namithajosf/"
-              aria-label="LinkedIn"
-              target="_blank"
-            >
-              <FaLinkedin className="hover:scale-130 transition" />
-            </a>
-            <a
-              href="https://github.com/namithajosf"
-              aria-label="GitHub"
-              target="_blank"
-            >
-              <FaGithub className="hover:scale-130 transition" />
-            </a>
-            <a
-              href="mailto: namithajosf@gmail.com"
-              aria-label="Email"
-              target="_blank"
-            >
-              <FaEnvelope className="hover:scale-130 transition" />
-            </a>
-            <a
-              href="https://www.instagram.com/namithajosf/"
-              aria-label="Instagram"
-              target="_blank"
-            >
-              <FaInstagramSquare className="hover:scale-130 transition" />
-            </a>
-          </div>
         </div>
       </div>
     </section>
