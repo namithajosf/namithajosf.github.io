@@ -31,43 +31,45 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f6fdf5] p-8">
-      <div className="max-w-7xl mx-auto">
-        <h2>Projects</h2>
+    <section id="projects">
+      <div className="min-h-screen bg-[#f6fdf5] p-8">
+        <div className="max-w-7xl mx-auto">
+          <h2>Projects</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {works.map((work) => (
-            <div
-              key={work.id}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-(--color-blue)/20"
-            >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-3xl font-dm-serif text-zinc-900">
-                  {work.title}
-                </h3>
-                <span className="text-4xl font-light text-(--color-green)/40">
-                  {work.id}
-                </span>
-              </div>
-
-              <p className="text-(--color-dark)/70 mb-6 leading-relaxed">
-                {work.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {work.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-[hsl(25,100%,40%,13%)] rounded-full text-sm font-medium text-(--color-orange) transition-all duration-300"
-                  >
-                    {tech}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {works.map((work) => (
+              <div
+                key={work.id}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-(--color-blue)/20"
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-3xl font-dm-serif text-zinc-900">
+                    {work.title}
+                  </h3>
+                  <span className="text-4xl font-light text-(--color-green)/40">
+                    {work.id}
                   </span>
-                ))}
+                </div>
+
+                <p className="text-(--color-dark)/70 mb-6 leading-relaxed">
+                  {work.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {work.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-[hsl(25,100%,40%,13%)] rounded-full text-sm font-medium text-(--color-orange) transition-all duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

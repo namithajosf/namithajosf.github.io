@@ -69,29 +69,31 @@ export default function Skills() {
   ];
 
   return (
-    <div className="min-h-screen bg-(--color-light) p-8">
-      <div className="max-w-6xl mx-auto">
-        <section className="mb-16">
-          <h2>Skills</h2>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-8">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="bg-[#f4f2ed] rounded-xl px-4 py-8 flex flex-col items-center justify-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-5 border border-(--color-blue)/10 w-full"
-              >
-                <img
-                  src={skill.Icon}
-                  alt={skill.name}
-                  className="w-14 h-14 object-contain"
-                />
-                <span className="text-xs font-medium text-(--color-dark) text-center">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </section>
+    <section id="skills">
+      <div className="min-h-screen bg-(--color-light) p-8">
+        <div className="max-w-6xl mx-auto">
+          <section className="mb-16">
+            <h2>Skills</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-8">
+              {skills.map((skill, index) => (
+                <div
+                  key={index}
+                  className="bg-[#f4f2ed] rounded-xl px-4 py-8 flex flex-col items-center justify-center gap-4 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-5 border border-(--color-blue)/10 w-full"
+                >
+                  <img
+                    src={skill.Icon}
+                    alt={skill.name}
+                    className="w-14 h-14 object-contain"
+                  />
+                  <span className="text-xs font-medium text-(--color-dark) text-center">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
