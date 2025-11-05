@@ -73,7 +73,7 @@ const Navbar = () => {
               onClick={handleNav}
               className="md:hidden p-2 text-(--color-dark) hover:text-(--color-green) transition-colors"
             >
-              {nav ? "" : <AiOutlineMenu size={28} />}
+              {!nav ? <AiOutlineMenu size={28} /> : ""}
             </button>
           </div>
         </div>
@@ -99,7 +99,8 @@ const Navbar = () => {
           ${nav ? "translate-x-0" : "translate-x-full"}
         `}
         >
-          <div className="flex flex-col h-full p-8 pt-20">
+          <div className="flex flex-col justify-between h-full p-8 pt-20">
+            {/* Menu Links */}
             <ul className="space-y-6">
               {navItems.map((item, index) => (
                 <li
@@ -116,7 +117,7 @@ const Navbar = () => {
                   <a
                     href={item.link}
                     onClick={handleNav}
-                    className="text-2xl font-medium text-(--color-dark) hover:text-(--color-green) transition-colors block"
+                    className="text-2xl font-medium text-(--color-dark) hover:text-(--color-green) transition-colors block py-2"
                   >
                     {item.title}
                   </a>
@@ -124,8 +125,9 @@ const Navbar = () => {
               ))}
             </ul>
 
+            {/* Bottom Fixed Button */}
             <div
-              className={`mt-12 transform transition-all duration-300 ${
+              className={`border-t border-gray-200 pt-6 transform transition-all duration-300 ${
                 nav ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
               style={{ transitionDelay: nav ? "250ms" : "0ms" }}
